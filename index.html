@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <nav class="p-4 fixed w-full top-0 bg-black z-10">
+        <div class="mx-auto flex justify-between items-center">
+            <!-- Heading -->
+            <div>
+                <h1 class="text-white text-2xl md:text-3xl font-semibold">Manveer Singh</h1>
+                <h1 class="text-white text-base md:text-lg font-semibold">Web Developer | Competitive Programmer</h1>
+            </div>
+            <div id="menu" class="absolute md:static md:flex inset-0 mt-[5.5rem] md:mt-0 z-30 h-fit bg-gray-100 md:bg-transparent" hidden>
+                <a href="#" class="text-black md:text-white md:rounded-full transition ease-in-out p-5 border-black md:p-3 hover:bg-gray-700 border text-center block" onclick=ToggleHide()>Home</a>
+                <a href="#skills" class="text-black md:text-white md:rounded-full transition ease-in-out p-5 md:p-3 border-black hover:bg-gray-700 border text-center block" onclick=ToggleHide()>Skills</a>
+                <!-- <a href="#projects" class="text-black md:text-white md:rounded-full transition ease-in-out p-5 md:p-3 border-black hover:bg-gray-700 border text-center block" onclick=ToggleHide()>Projects</a> -->
+                <a href="#resume" class="text-black md:text-white md:rounded-full transition ease-in-out p-5 md:p-3 border-black hover:bg-gray-700 border text-center block" onclick=ToggleHide()>Resume</a>
+                <a href="#education" class="text-black md:text-white md:rounded-full transition ease-in-out p-5 md:p-3 border-black hover:bg-gray-700 border text-center block" onclick=ToggleHide()>Education</a>
+                <a href="#contact" class="text-black md:text-white md:rounded-full transition ease-in-out p-5 md:p-3 border-black hover:bg-gray-700 border text-center block" onclick=ToggleHide()>Contact</a>
+            </div>
+            <!-- Hamburger -->
+            <div class="hamburger inline-block cursor-pointer md:hidden " onclick=ToggleHide()>
+                <div id="hamburger" class="border border-white p-1">
+                    <div class="line h-1 w-7 bg-white my-1"></div>
+                    <div class="line h-1 w-7 bg-white my-1"></div>
+                    <div class="line h-1 w-7 bg-white my-1"></div>
+                </div>
+                <div id="cross" hidden>
+                    <div class="w-6 h-1 bg-white rotate-45"></div>
+                    <div class="w-6 h-1 bg-white -rotate-45 -translate-y-1"></div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Me -->
+    <section class="bg-gradient-to-r from-purple-500 via-purple-300 to-purple-500 p-[5%] mt-20">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-semibold mb-4 text-center">Professional Summary</h2>
+            <div class="flex flex-col md:flex-row justify-center">
+                <div class="mx-auto md:mx-0 w-[80%] md:w-[50%] p-4 h-auto xl:w-[400px]">
+                    <img src="./manveer.jpg" alt="Profile img" class="rounded-full mb-4 md:mb-0 hover:scale-110 transition ease-in hover:shadow-black hover shadow-lg">
+                </div>
+                <div class="md:w-1/2 p-4 text-xl">
+                    <p class="text-black mb-4">Hello! I'm Manveer Singh, a passionate and creative web developer with a strong background in front-end development. I love turning ideas into beautiful and functional websites. My goal is to create user-friendly experiences that leave a positive impact.I specialize in HTML, CSS, JavaScript, and popular front-end frameworks like React and Tailwind.</p>
+                    <p class="text-black"> I possess proficiency in Data Structures and Algorithms (DSA) using C++. I am well-versed in competitive programming and adept at solving complex problems. I enjoy collaborating with teams, problem-solving, and staying up-to-date with the latest trends. When I'm not coding, you can find me watching movies, reading, or experimenting with new recipes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Skills -->
+    <section id="skills" class="py-10 md:w-[80%] mx-auto">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-semibold mb-4 text-center">Skills</h2>
+            <div class="md:flex md:justify-center md:space-x-10 space-y-5 md:space-y-0 m-3">
+                <div class="p-4 rounded-lg bg-purple-300 shadow-black shadow-lg hover:scale-105 transition ease-in">
+                    <h3 class="text-xl font-semibold mb-2">Front-End Development</h3>
+                    <ul class="list-disc pl-6 text-gray-700">
+                        <li>HTML, CSS, JavaScript</li>
+                        <li>React</li>
+                        <li>Responsive Design</li>
+                        <li>NodeJs</li>
+                        <li>ExpressJs</li>
+                        <li>MongoDb and much more......</li>
+                    </ul>
+                </div>
+                <div class="p-4 rounded-lg bg-purple-300 shadow-black shadow-lg hover:scale-105 transition ease-in">
+                    <h3 class="text-xl font-semibold mb-2">Programming Languages</h3>
+                    <ul class="list-disc pl-6 text-gray-700">
+                        <li>C, C++</li>
+                        <li>Java</li>
+                        <li>Python</li>
+                    </ul>
+                </div>
+                <div class="p-4 rounded-lg bg-purple-300 shadow-black shadow-lg hover:scale-105 transition ease-in">
+                    <div>
+                    <h3 class="text-xl font-semibold mb-2">DSA in C++</h3>
+                    <ul class="list-disc pl-6 text-gray-700">
+                        <li>Date Structures</li>
+                        <li>Algorithms</li>
+                    </ul>
+                    
+                    <h3 class="text-xl font-semibold my-2">DataBase</h3>
+                    <ul class="list-disc pl-6 text-gray-700">
+                        <li>My SQL</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Projects -->
+    <!-- <section id="projects" class="py-10 md:w-[70%] mx-auto">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-semibold mb-4 text-center">Projects</h2>
+            <div class="space-y-10 m-4">
+                <div class="p-6 rounded-lg bg-purple-300 shadow-black shadow-lg hover:scale-105 transition ease-in">
+                    <h3 class="text-xl font-semibold mb-2">Microsoft Clone</h3>
+                    <p class="text-gray-700 mb-3">I have created an exact clone of Microsoft's website using html and tailwind</p>
+                    <a href="https://iamrommy.github.io/Microsoft-Clone" target="_blank" class="text-blue-500 hover:underline">View Project</a>
+                </div>
+                <div class="p-6 rounded-lg bg-purple-300 shadow-black shadow-lg hover:scale-105 transition ease-in">
+                    <h3 class="text-xl font-semibold mb-2">TextUtils React-App</h3>
+                    <p class="text-gray-700 mb-3">A Text Utility React App made with Tailwind and React. Can be used To edit Text.</p>
+                    <a href="https://textutils-myreactapp.netlify.app" target="_blank" class="text-blue-500 hover:underline">View Project</a>
+                </div>
+                <div class="p-6 rounded-lg bg-purple-300 shadow-black shadow-lg hover:scale-105 transition ease-in">
+                    <h3 class="text-xl font-semibold mb-2">Snake Game</h3>
+                    <p class="text-gray-700 mb-3">Game Created using Tailwind and Javascript . In this game Snake Eats The Food and Grow.</p>
+                    <a href="https://iamrommy.github.io/Snake-Game" target="_blank" class="text-blue-500 hover:underline">View Project</a>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    
+    <!-- Resume -->
+    <section id="resume" class="py-10 md:w-[75%] md:mx-auto border-2 rounded-2xl border-black bg-purple-300 shadow-black shadow-lg 3-4">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-semibold mb-6 text-center">My Resume</h2>
+            <div class="flex justify-center">
+                <a href="./CV_2023-08-06-092017 (1).pdf" target="_blank" class="bg-black text-white px-6 py-3 rounded-md hover:bg-gray-800 transition duration-300 ease-in-out hover:scale-105">
+                    Download Resume
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Education -->
+    <section id="education" class="bg-transparent py-10 md:w-[70%] md:mx-auto m-4">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-semibold mb-4 text-center">Education</h2>
+            <div class="space-y-4">
+                <div class="p-4 rounded-lg bg-purple-300 shadow-black shadow-lg hover:scale-105 transition ease-in">
+                    <h3 class="text-xl font-semibold mb-2">BTech Computer Science (3rd Year)</h3>
+                    <p class="text-gray-700 mb-1">Guru Tegh Bahadur Institute of Technology (IPU)</p>
+                    <p class="text-gray-500">2021 - 2025</p>
+                </div>
+                <div class="p-4 rounded-lg bg-purple-300 shadow-black shadow-lg hover:scale-105 transition ease-in">
+                    <h3 class="text-xl font-semibold mb-2">12th Grade</h3>
+                    <p class="text-gray-700 mb-1">Shaheed Bishan Singh Memorial School</p>
+                    <p class="text-gray-500">2021</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact -->
+    <section id="contact" class="bg-transparent py-10 md:w-[70%] md:mx-auto m-4">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-semibold mb-4 text-center">Contact</h2>
+            <div class="space-y-4">
+                <div class="p-6 rounded-lg bg-purple-300 shadow-black shadow-lg hover:scale-105 transition ease-in">
+                    <h3 class="text-xl font-semibold mb-2">Get in Touch</h3>
+                    <p class="text-gray-700 mb-3">Feel free to contact me for collaboration or inquiries.</p>
+                    <ul class="text-gray-700 space-y-2">
+                        <li><strong>Email:</strong> singhmanveer645@gmail.com</li>
+                        <li><strong>Phone:</strong> 8882259309</li>
+                    </ul>
+                </div>
+                <div class="p-6 rounded-lg bg-purple-300 shadow-black shadow-lg hover:scale-105 transition ease-in">
+                    <h3 class="text-xl font-semibold mb-2">Social Links</h3>
+                    <ul class="text-gray-700 space-y-2">
+                        <li><a href="https://github.com/manveer600" target="_blank" class="text-blue-500 hover:underline">GitHub</a>
+                        <li><a href="https://www.linkedin.com/in/manveer-singh-5421041b4/" target="_blank" class="text-blue-500 hover:underline">LinkedIn</a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- footer -->
+    <footer class="bg-black text-white py-6">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2023 Manveer All rights reserved.</p>
+        </div>
+    </footer>
+    
+
+</body>
+<script>
+    const ToggleHide = ()=>{
+        let menu = document.getElementById('menu');
+        let cross = document.getElementById('cross');
+        let hamburger = document.getElementById('hamburger');
+        
+        if(menu.hasAttribute('hidden')){
+            menu.removeAttribute('hidden');
+            cross.removeAttribute('hidden');
+            hamburger.setAttribute('hidden', true);
+        }
+        else{
+            menu.setAttribute('hidden', true);
+            cross.setAttribute('hidden', true);
+            hamburger.removeAttribute('hidden');
+        }
+    }
+</script>
+</html>
